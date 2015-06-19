@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="momentsApp">
+	<head>
+		<title>Moments app</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body ng-controller = "momentsCtrl">
+		<div class= "wrapper">
+			<nav id = "operationsNav">
+				<header>
+						<a href="https://shared-moments.herokuapp.com/createAlbum.html"></a>
+				</header>
+			</nav>
+			<main id= "albumsArea">
+				<section class="momentAlbum" ng-repeat="item in moment.items">
+					<img class="innerPic" ng-src="{{item.pic}}">
+					<section class="innertext">
+						<h2>{{item.album_name}}</h2>
+						<h3>{{item.date}}</h3>
+						<img src="/images/persons_icon.png">
+						<h4 ng-repeat="person in item.persons">{{person}}</h4>		
+					</section>
+				</section>
+			</main>
+		</div>
+		<script src="js/lib/angular/angular.min.js"></script>
+		<script src="js/moments.js"></script>
+	</body>
+</html>

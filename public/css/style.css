@@ -1,0 +1,211 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+header, main, nav, footer, section, article, aside, body {
+	display: block;
+}
+
+html {
+	background-color: #fff;
+}
+
+nav {
+	width: 640px;
+	height: 100px;
+	margin-bottom: 30px;
+}
+
+#operationsNav{
+	background-image: url("../images/header.png");
+	position:relative;
+}
+
+operationsNav>header{
+	
+}
+
+#operationsNav > header > a{
+	background-image: url("../images/plus_album.png");
+	width: 34px;
+	height: 34px;
+	position: absolute;
+	top:33px;
+	left:42px;
+}
+
+.wrapper {
+	width: 640px;
+	margin: 0 auto;
+	background-color: #c1c1bf;
+	min-height: 900px;
+	padding-bottom: 30px;
+}
+
+#albumsArea{
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+/*	index	*/
+.momentAlbum {
+	width: 480px;
+	height: 170px;
+	background-color: #fcfcfb;
+	padding: 20px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+.innerPic {
+	width: 170px;
+	height: 170px;
+	float: left;
+	margin-right: 18px;
+}
+
+.innertext {
+	float: left;
+	position: relative;
+	height: 170px;
+	font-family: Arial;
+}
+
+.innertext > h2 {
+	color: #000;
+	font-size: 30px;
+}
+
+.innertext > h3 {
+	color: #ccc;
+	font-size: 26px;
+	margin-top: 20px;
+}
+
+.innertext > h4 {
+	color: #ccc;
+	font-size: 22px;
+	float: left;
+	margin-top: 60px;
+	margin-right: 12px;
+}
+
+.innertext > img {
+	width: 25px;
+	height: 25px;
+	margin-top: 60px;
+	float: left;
+	margin-right: 10px;
+}
+
+/*	create album page	*/
+.album_header {
+	background-image: url("../images/album_header.png");
+}
+
+.AlbumCreation {
+	width: 450px;
+	background-color: #fcfcfb;
+	padding: 50px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.innerAC {
+	width: 475px;
+	border: none;
+	font-size: 28px;
+	font-family: Arial;
+	outline: 0;
+	margin-bottom: 30px;
+	line-height: 22px;
+	border-bottom: 1px solid #000;
+}
+
+.innerACMap {
+	width: 250px;
+	text-indent: 40px;
+}
+
+.AlbumCreation > a {
+	position: absolute;
+	width: 44px;
+	height: 38px;
+}
+
+.AlbumCreation > a:nth-child(3) {
+	right: 25px;
+	top: 100px;
+	background: url("../images/plus_icon.png");
+}
+
+.AlbumCreation > a:nth-child(5) {
+	left: 35px;
+	top: 166px;
+	background: url("../images/map_icon.png");
+}
+
+.uploadPic {
+	background: #ccc;
+	width: 460px;
+	height: 460px;
+	margin-top: 30px;
+}
+
+.uploadPic > h2 {
+	padding-top: 190px;
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+	font-family: Arial;
+}
+
+.v_x {
+	margin-top: 50px;
+	margin: 0 auto;
+	width: 200px;
+	margin-top: 55px;
+	padding-bottom: 50px;
+}
+
+.v_x > a, .v_x > input {
+	width: 56px;
+	height: 47px;
+	display: block;
+	float: left;
+	margin: 0px 20px;
+	border: none;
+}
+
+.v_x > button {
+	background: none;
+	border: 0;
+	background: url("../images/x_icon.png");
+}
+
+/* edit album page */
+.details {
+	width: 640px;
+	height: 160px;
+	background: #ccc;
+	margin-left: -40px;
+	margin-top: -40px;
+}
+
+.details > h2, .details > h3, .details > h4 {
+	margin: 0 auto;
+	color: #fff;
+}
+
+.details + button {
+	margin: 0 auto;
+	display: block;
+	margin-top: 30px;
+}
+
+.details + button > img {
+	background: none;
+	border: 0;
+}

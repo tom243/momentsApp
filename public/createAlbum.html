@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="momentsApp">
+<head>
+	<title>Moments app</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-controller = "momentsCtrl">
+	<div class= "wrapper">
+		<nav class="album_header">
+			<header>
+					
+			</header>
+		</nav>
+		<main>
+			<form action="https://shared-moments.herokuapp.com/createAlbum/" name="albumCreation" method="GET">
+				<section class="AlbumCreation">
+					<input class="innerAC" type="text" name="album_name" placeholder="type an album name" required> </input>
+					<input class="innerAC" type="text" name="persons" placeholder="add contact..."> </input>
+					<a href="#"></a>
+					<input class="innerAC innerACMap" type="text" name="creationAddress"> </input>
+					<a href="#"></a>
+					<section class="uploadPic"><h2>upload photo</h2></section>
+					<a href="#"></a>
+					<a href="#"></a>
+					<section class="v_x">
+						<input type="image" src="images/v_icon.png"></input>
+						<button type="reset"><img src="images/x_icon.png"></button>
+					</section>
+				</section>
+			</form>
+		</main>
+	</div>
+	<script src="js/lib/angular/angular.min.js"></script>
+	<script src="js/moments.js"></script>
+</body>
+</html>

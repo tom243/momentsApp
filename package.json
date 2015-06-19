@@ -1,0 +1,15 @@
+{
+  "name": "webServer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Tomer and Roni",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.4"
+  }
+}
