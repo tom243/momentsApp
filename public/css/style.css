@@ -232,12 +232,12 @@ button:hover,a:hover,input [type="checkbox"]:hover,label:hover,#uploadPic:hover{
 }
 
 #paddingBox {
-	padding: 0px 200px;
+	padding: 0px 70px;
 	margin-top: 44px;
 }
 
 #AlbumCreation {
-	padding: 47px 150px 0px;
+	padding: 47px 50px 0px;
 	margin-top: 100px;
 	position: relative;
 	background: #fff;
@@ -260,7 +260,7 @@ button:hover,a:hover,input [type="checkbox"]:hover,label:hover,#uploadPic:hover{
 }
 
 #creationAddress {
-	width: 293px;
+	width: 452px;
 	text-indent: 39px;
 	font-size: 20px;
 	overflow: scroll;
@@ -280,7 +280,7 @@ button:hover,a:hover,input [type="checkbox"]:hover,label:hover,#uploadPic:hover{
 
 #AlbumCreation > button:nth-child(5) {
 	position: absolute;
-	left: 147px;
+	left: 42px;
 	top: 180px;
 	width: 33px;
 	height: 44px;
@@ -299,7 +299,7 @@ button:hover,a:hover,input [type="checkbox"]:hover,label:hover,#uploadPic:hover{
 	float: left;
 	position: absolute;
 	top: 189px;
-	left: 73%;
+	left: 72%;
 	background: url("../images/icons/unchecked.png");
 }
 #AlbumCreation > input[type="checkbox"]:checked + label {
@@ -493,6 +493,11 @@ input[type='file'] {
 	padding-left: 33%;
 	height: 106px;
 }
+
+#fileTypes {
+	padding-left: 29%;
+}
+
 #fileTypes > input + label {
 	width: 106px;
 	height: 106px;
@@ -803,8 +808,8 @@ video {
 		color: #fff;
 		font-family: Arial;
 		text-align: center;
-	display: block;
-	margin-top:200px;
+		display: block;
+		margin-top:200px;
 	}
 	#fileTypes, #fileTypes > input {
 		padding-left: 113px;
@@ -819,7 +824,6 @@ video {
 		overflow-x:hidden;
 	}
 
-
 	#paddingBox{
 		padding: 0px 43px 48px;
 		background-color: #eef0ef;
@@ -830,8 +834,13 @@ video {
 		font-size: 25px;
 		line-height: 33px;
 	}
-#viewImage > section{
-	height:66%;
-}
+
+	#viewImage > section{
+		height:66%;
+	}
+
+	##creationAddress {
+		width: 290px;
+	}
 
 }

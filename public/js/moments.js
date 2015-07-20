@@ -164,8 +164,6 @@ app.controller('contactsController', function($scope, $http, filterFilter, $cook
       }
     });
 
-    //console.log($scope.selected);
-    //  console.log(contactsSelected);
 
     window.location.href = "#/createAlbum";
 
