@@ -1,0 +1,22 @@
+<header id = "menu" >
+	<nav>
+		<a href="#/createAlbum"></a>
+		<a href="#/albums"></a>
+		<a href="#/albums"></a>
+		<a href="#/albums" id="logo"></a>
+	</nav>
+</header>
+<main id= "albumsArea">
+	<section class="momentAlbum" ng-repeat="item in moment.items" ng-click= "albumClicked(item.album_name)">
+		<section class="innertext" back-img="{{item.pic}}">
+			<h2 ng-model="bookName">{{item.album_name}}</h2>
+			<h3>{{item.date}}</h3>
+			<img src="images/icons/people.png">
+			<article>
+				<p ng-repeat="person in item.persons">
+					{{person}}{{$last ? '' : ', '}}
+				</p>
+			</article>
+		</section>
+	</section>
+</main>

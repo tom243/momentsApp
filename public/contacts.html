@@ -1,0 +1,21 @@
+<header id="contact_nav">
+	<nav>
+		<a href="#/contacts"></a>
+		<input type="text" ng-model="searchText" placeholder="add contact...">
+		<a href="#/albums" id="logo"></a>
+	</nav>
+</header>
+<main>
+	<form ng-submit="submitContacts()" id= "contactsForm" method="post">
+		<section class="friends" ng-if = "contact.name != activeUser" ng-repeat="contact in contacts.items | filter:searchFilter">
+			<input type="checkbox"  id="{{contact.name}}" ng-model="selected[contact.name]">
+			<label for="{{contact.name}}" class="selected"> <h2>{{contact.name}}</h2> </label>
+		</section>
+		<section class="submitButtons" id ="contactsSelection">
+			<button type="submit"></button>
+			<img src="images/icons/line.png">
+			<button type="reset" ng-click="initializeContacts()"><img src="images/icons/x.png">
+			</button>
+		</section>
+	</form>
+</main>

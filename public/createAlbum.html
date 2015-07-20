@@ -1,36 +1,28 @@
-<!DOCTYPE html>
-<html ng-app="momentsApp">
-<head>
-	<title>Moments app</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body ng-controller = "momentsCtrl">
-	<div class= "wrapper">
-		<nav class="album_header">
-			<header>
-					
-			</header>
-		</nav>
-		<main>
-			<form action="https://shared-moments.herokuapp.com/createAlbum/" name="albumCreation" method="GET">
-				<section class="AlbumCreation">
-					<input class="innerAC" type="text" name="album_name" placeholder="type an album name" required> </input>
-					<input class="innerAC" type="text" name="persons" placeholder="add contact..."> </input>
-					<a href="#"></a>
-					<input class="innerAC innerACMap" type="text" name="creationAddress"> </input>
-					<a href="#"></a>
-					<section class="uploadPic"><h2>upload photo</h2></section>
-					<a href="#"></a>
-					<a href="#"></a>
-					<section class="v_x">
-						<input type="image" src="images/v_icon.png"></input>
-						<button type="reset"><img src="images/x_icon.png"></button>
-					</section>
-				</section>
-			</form>
-		</main>
-	</div>
-	<script src="js/lib/angular/angular.min.js"></script>
-	<script src="js/moments.js"></script>
-</body>
-</html>
+<header id="createAlbum_nav">
+	<nav>
+		<a ng-href="#/albums" ng-click="initializeContacts()"> <h2 id="createAlbumTitle"></h2> </a>
+		<a href="#/albums" id="logo"></a>
+	</nav>
+</header>
+<main id="paddingBox">
+	<form ng-submit="submitAlbum()" id= "albumCreationForm" method="post">
+		<section id="AlbumCreation">
+			<input   id ="albumName" ng-model="albumName" type="text" name="album_name" placeholder="type an album name" required>
+			</input>
+			<input disabled  id ="persons" ng-model="persons" type="text" name="persons" placeholder="add contact...">
+			</input> <a ng-click ="chooseContacts(albumName,persons,creationAddress)"></a>
+			<input  id ="creationAddress" disabled ng-model="creationAddress" required type="text" name="creation_address">
+			</input> <button type="button" ng-click="currentLocation()" ></button>
+			<input type="checkbox" id="mobile_event" name="mobile_event">
+			<label for="mobile_event"></label>
+			<h3></h3>
+			<input type="file" name="image"  id="uploadPic" ng-model="fileUpload" accept="image/x-png, image/gif, image/jpeg" />
+			<section class="submitButtons">
+				<button  type ="submit"></button>
+				<img src="images/icons/line2.png">
+				<button type="reset"><img src="images/icons/x.png">
+				</button>
+			</section>
+		</section>
+	</form>
+</main>

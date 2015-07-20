@@ -1,0 +1,85 @@
+<header id="details" back-img="{{moment.items.pic}}">
+	<nav id="detailsNav">
+		<a ng-href="#/albums"></a>
+		<h2>{{moment.items.album_name}}</h2>
+		<img src="images/icons/people.png">
+		<h3></h3>
+		<img src="images/icons/search2.png">
+		<button ng-if = "moment.items.mobile_event == true" ng-click="moveToMapPage()"></button>
+		<h4 ng-if = "moment.items.creation_address != 'null'">{{moment.items.creation_address}}</h4>
+		<a href="#/albums" id="logo"></a>
+	</nav>
+</header>
+<main id="viewAlbumPage">
+
+	<section class="momentsTypes"  ng-repeat="oneMoment in moment.items.moment_event"  ng-switch on="oneMoment.moment_type">
+		<img src="images/icons/moment_line.png">
+		<section ng-switch-when="image" class="post-image">
+			<article ng-click ="moveToViewImagePage(oneMoment.moment_input)" back-img="{{oneMoment.moment_input}}"></article>
+			<article>
+				<p>
+					{{oneMoment.creation_time}}
+				</p>
+				<p>
+					{{oneMoment.owner}}
+				</p>
+			</article>
+		</section>
+		<section ng-switch-when="video" class="post-video">
+			<article>
+				<video  width=100% controls src="" dynamic-url dynamic-url-src="{{oneMoment.moment_input}}"
+				></video>
+			</article>
+			<article>
+				<p>
+					{{oneMoment.creation_time}}
+				</p>
+				<p>
+					{{oneMoment.owner}}
+				</p>
+			</article>
+		</section>
+		<section ng-switch-when="text" class="post-text">
+			<article>
+				<p>
+					{{oneMoment.moment_input}}
+				</p>
+			</article>
+			<article>
+				<p>
+					{{oneMoment.creation_time}}
+				</p>
+				<p>
+					{{oneMoment.owner}}
+				</p>
+			</article>
+		</section>
+	</section>
+
+	<section id="popupTextBox">
+		<form ng-submit= "popupTextBox()">
+			<input type="text"  required placeholder="what's on your mind?" ng-model="userTextInput">
+			<section class="submitButtons">
+				<button  type ="submit"></button>
+				<img src="images/icons/line.png">
+				<button type="reset"><img src="images/icons/x.png">
+				</button>
+			</section>
+		</form>
+	</section>
+
+	<button type="button" id="addMoment" ng-click="addMoments()"></button>
+	<section id="fileTypes">
+		<input type="file" name="image" id="uploadPicture"  ng-model="image"  onchange="angular.element(this).scope().uploadImage()" accept="image/x-png, image/gif, image/jpeg" />
+		<label for="uploadPicture"/>
+
+		<input type="file" name="video" id="uploadVideo" ng-model="video" onchange="angular.element(this).scope().uploadVideo()" accept="video/mp4,video/x-m4v,video/*"/>
+		<label for="uploadVideo"/>
+
+		<input name="audio" id="uploadAudio" ng-model="fileUpload"/>
+		<label for="uploadAudio"/>
+
+		<input name="text" id="uploadText" ng-model="text" ng-click="uploadText()" />
+		<label for="uploadText"/>
+	</section>
+</main>

@@ -1,0 +1,14 @@
+<header  id="momentMap" back-img="{{moment.items.pic}}">
+	<nav>
+		<a ng-href="#/albums"></a>
+		<h2>{{moment.items.album_name}}</h2>
+		<img src="images/icons/people.png">
+		<h3></h3>
+		<img src="images/icons/search2.png">
+		<button ng-if = "moment.items.mobile_event == true" ng-click="backToViewAlbum()"></button>
+		<h4 ng-if = "moment.items.creation_address != 'null'">{{moment.items.creation_address}}</h4>
+	</nav>
+</header>
+<main id ="map">
+	<div id="map-canvas"></div>
+</main>
